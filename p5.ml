@@ -10,7 +10,7 @@ let rec gcd a b =
  
     let range n =
       let rec range n l =
-      if (n<=1) then l
+      if (n<1) then l
       else range (n-1) (n::l) in
       range n []
 ;;
