@@ -16,3 +16,5 @@ let rec gcd a b =
   
     print_int (List.fold_left (fun a b -> lcm a b) 1 (range 20))
 
+;;
+
