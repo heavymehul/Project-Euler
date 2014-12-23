@@ -1,24 +1,21 @@
 let rec gcd a b =
-    if b = 0
-   then a
-    else
-    gcd b
-    ( a mod b) ;;
+    if b = 0 then a
+    else gcd b ( a mod b) 
+    in
 
 
 let rec lcm a b =
-    if b = 0
-    then a
-    else
-    (a * b) / (gcd a b)
-    ;;
+    if b = 0 then a
+    else (a * b) / (gcd a b)
+    in
+    
 
 let range n =
   let rec range n l =
-    if (n<=1)
-    then l
+    if (n<=1) then l
     else range (n-1) (n::l)
+    in
   
-  ;;
+  
 
-print_int (List.fold_left (fun a b -> lcm a b) 1 (range 20));;
+print_int (List.fold_left (fun a b -> lcm a b) 1 (range 20))
